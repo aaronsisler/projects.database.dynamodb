@@ -1,0 +1,5 @@
+{
+  "partitionKey": { "S": "1" },
+  "sortKey": { "S": "1" },
+  "data": { "S": "I am data 1-1" }
+}

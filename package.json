@@ -1,0 +1,19 @@
+{
+  "name": "applications.paper-trail.api-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronsisler/applications.paper-trail.api-service.git"
+  },
+  "author": "Aaron Sisler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaronsisler/applications.paper-trail.api-service/issues"
+  },
+  "homepage": "https://github.com/aaronsisler/applications.paper-trail.api-service#readme"
+}
