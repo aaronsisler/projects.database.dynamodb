@@ -1,5 +1,5 @@
 {
-  "name": "applications.paper-trail.api-service",
+  "name": "projects.database.dynamodb",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aaronsisler/applications.paper-trail.api-service.git"
+    "url": "git+https://github.com/aaronsisler/projects.database.dynamodb.git"
   },
   "author": "Aaron Sisler",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aaronsisler/applications.paper-trail.api-service/issues"
+    "url": "https://github.com/aaronsisler/projects.database.dynamodb/issues"
   },
-  "homepage": "https://github.com/aaronsisler/applications.paper-trail.api-service#readme"
+  "homepage": "https://github.com/aaronsisler/projects.database.dynamodb#readme"
 }
