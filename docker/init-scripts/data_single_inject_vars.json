@@ -3,7 +3,8 @@
     "Item": {
       "partitionKey": { "S": "PRIMARY_KEY" },
       "sortKey": { "S": "SECONDARY_KEY" },
-      "data": { "S": "I am data PRIMARY_KEY-SECONDARY_KEY" }
+      "data": { "S": "I am data PRIMARY_KEY-SECONDARY_KEY" },
+      "category": { "S": "CATEGORY_VAR" }
     }
   }
 }

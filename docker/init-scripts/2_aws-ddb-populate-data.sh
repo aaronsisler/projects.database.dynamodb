@@ -9,10 +9,14 @@ aws configure set region "us-east-1"
 RAW_DATA=`cat /init-scripts/data_single_inject_vars.json`
 
 # Currently the maximum batch size for writing to DDB
-BATCH_SIZE=25
+BATCH_SIZE=2
 
 # Init the batch-write-items object that will be concatenated to
 COLLECTION_DATA=""
+
+# Hard coded categories for the moment
+CATEGORY_1="FAST_FOOD"
+CATEGORY_2="SHOPPING"
 
 # Sets the beginning of the JSON structure and required batch-write-items table name
 TABLE_NAME="POC_QUERY_TABLE"
@@ -26,6 +30,13 @@ do
     # Replaces all instances of variable in RAW_DATA with the number incremented through loop 
     RAW_DATA_REPLACED=`echo "${RAW_DATA//PRIMARY_KEY/$PRIMARY_KEY}"`
     RAW_DATA_REPLACED=`echo "${RAW_DATA_REPLACED//SECONDARY_KEY/$SECONDARY_KEY}"`
+    
+    if [ $SECONDARY_KEY -eq $(( $SECONDARY_KEY % 2 )) ]
+    then
+      RAW_DATA_REPLACED=`echo "${RAW_DATA_REPLACED//CATEGORY_VAR/$CATEGORY_1}"`
+    else
+      RAW_DATA_REPLACED=`echo "${RAW_DATA_REPLACED//CATEGORY_VAR/$CATEGORY_2}"`
+    fi
     
     COLLECTION_DATA="$COLLECTION_DATA$RAW_DATA_REPLACED"
     if [ $SECONDARY_KEY -ne $BATCH_SIZE ]

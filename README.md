@@ -24,7 +24,6 @@ List out the items in a table. Best to use this if the table count is small.
 aws dynamodb scan \
  --endpoint-url=http://localhost:8000 \
  --table-name POC_QUERY_TABLE
-
 ```
 
 Check the count of a table
