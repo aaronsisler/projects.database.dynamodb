@@ -1,4 +1,4 @@
-# applications.paper-trail.api-service
+# projects.database.dynamodb
 
 The purpose of this repository is to test the validity of using DynamoDB as a datastore for large datasets that need to be queried against.
 
