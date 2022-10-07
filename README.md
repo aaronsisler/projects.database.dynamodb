@@ -4,13 +4,13 @@ The purpose of this repository is to test the validity of using DynamoDB as a da
 
 ## Docker Commands
 
-Start the DynamoDB
+Start the DynamoDB container
 
 ```
 docker-compose -f ./docker/docker-compose.yml up -d
 ```
 
-Stop the DynamoDB
+Stop the DynamoDB container
 
 ```
 docker-compose -f ./docker/docker-compose.yml down
