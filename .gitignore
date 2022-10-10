@@ -1,0 +1,17 @@
+# dependencies
+/node_modules
+
+# secrets
+.env
+
+# build/production folders
+.next/
+build/
+**/build/
+dist/
+**/dist/
+
+# local files
+npm-debug.log*
+sh.exe.stackdump
+**/.DS_Store
