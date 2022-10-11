@@ -9,7 +9,7 @@ aws configure set region "us-east-1"
 RAW_DATA=`cat /init-scripts/data_single_inject_vars.json`
 
 # Currently the maximum batch size for writing to DDB
-BATCH_SIZE=2
+BATCH_SIZE=25
 
 # Init the batch-write-items object that will be concatenated to
 COLLECTION_DATA=""
@@ -31,7 +31,7 @@ do
     RAW_DATA_REPLACED=`echo "${RAW_DATA//PRIMARY_KEY/$PRIMARY_KEY}"`
     RAW_DATA_REPLACED=`echo "${RAW_DATA_REPLACED//SECONDARY_KEY/$SECONDARY_KEY}"`
     
-    if [ $SECONDARY_KEY -eq $(( $SECONDARY_KEY % 2 )) ]
+    if [  $(( $SECONDARY_KEY % 2 )) -eq 1 ]
     then
       RAW_DATA_REPLACED=`echo "${RAW_DATA_REPLACED//CATEGORY_VAR/$CATEGORY_1}"`
     else
